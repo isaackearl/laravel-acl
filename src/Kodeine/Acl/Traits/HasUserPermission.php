@@ -117,7 +117,7 @@ trait HasUserPermission
      */
     protected function addSlug($alias, array $permissions)
     {
-        $slugs = $this->permissions->lists('slug', 'name');
+        $slugs = $this->permissions->lists('slug', 'name')->all();
         $collection = new Collection($slugs);
 
         if ( $collection->has($alias) ) {
@@ -138,7 +138,7 @@ trait HasUserPermission
      */
     protected function removeSlug($alias, array $permissions)
     {
-        $slugs = $this->permissions->lists('slug', 'name');
+        $slugs = $this->permissions->lists('slug', 'name')->all();
         $collection = new Collection($slugs);
 
         if ( $collection->has($alias) ) {

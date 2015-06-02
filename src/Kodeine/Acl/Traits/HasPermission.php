@@ -86,7 +86,7 @@ trait HasPermission
     public function assignPermission($permission)
     {
         if($permission instanceof Collection) {
-            $permission = $permission->lists('name');
+            $permission = $permission->lists('name')->all();
         }
         
         return $this->mapArray($permission, function ($permission) {
@@ -112,7 +112,7 @@ trait HasPermission
     public function revokePermission($permission)
     {
         if($permission instanceof Collection) {
-            $permission = $permission->lists('name');
+            $permission = $permission->lists('name')->all();
         }
         
         return $this->mapArray($permission, function ($permission) {
@@ -132,7 +132,7 @@ trait HasPermission
     public function syncPermissions($permissions)
     {
         if($permissions instanceof Collection) {
-            $permissions = $permissions->lists('name');
+            $permissions = $permissions->lists('name')->all();
         }
         
         $sync = [];

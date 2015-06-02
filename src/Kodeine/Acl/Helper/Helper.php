@@ -14,7 +14,7 @@ trait Helper
     protected function toDotPermissions(array $permissions)
     {
         $data = [];
-        //$permissions = $this->permissions->lists('slug', 'name');
+        //$permissions = $this->permissions->lists('slug', 'name')->all();
         foreach ($permissions as $alias => $perm) {
             if ( ! is_array($perm) ) continue;
             foreach ($perm as $key => $value) {

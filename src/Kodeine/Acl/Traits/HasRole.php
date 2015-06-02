@@ -31,7 +31,7 @@ trait HasRole
      */
     public function getRoles()
     {
-        return is_null($this->roles) ? [] : $this->roles->lists('slug');
+        return is_null($this->roles) ? [] : $this->roles->lists('slug')->all();
     }
 
     /**
