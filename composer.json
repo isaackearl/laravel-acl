@@ -11,8 +11,8 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "5.1.x",
-        "illuminate/database": "5.1.x"
+        "illuminate/support": "4.2.x|~5.0",
+        "illuminate/database": "4.2.x|~5.0"
     },
     "autoload": {
         "classmap": [
@@ -21,6 +21,6 @@
             "Kodeine\\Acl\\": "src/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "license": "MIT"
 }
